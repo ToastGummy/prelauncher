@@ -14,11 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require_tree .
+= require_tree.
 
 
-$(document).ready(function(){
-	if ($(".alert").length > 0){
-		$(".alert").delay(3000).fadeOut()
-	}
+$(document).ready(function() {
+  if ($(".alert").length > 0) {
+    $(".alert").delay(3000).fadeOut()
+  }
 })
