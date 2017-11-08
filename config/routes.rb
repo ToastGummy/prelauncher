@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+#  mount Lockup::Engine, at: '/lockup'
   devise_for :admins
   resources :prizes, except: :show
   resources :settings, only: [:create, :update, :index]
