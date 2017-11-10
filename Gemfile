@@ -27,7 +27,7 @@ gem 'haml-rails'
 # A banch of useful helpers for HTML forms
 gem 'simple_form'
 
-# User authentication 
+# User authentication
 gem 'devise'
 
 gem 'unicorn'
@@ -47,8 +47,7 @@ gem "paperclip"
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 #gem 'lockup'
-
+gem 'rack-tracker'
 group :development, :test do
 
 end
-

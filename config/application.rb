@@ -28,15 +28,19 @@ module Prelaunch
     #     user_name:            'YOUR_MANDRILL_LOGIN',
     #     password:             'YOUR_MANDRILL_API_KEY',
     #     authentication:       :login,
-    #     enable_starttls_auto: true  
+    #     enable_starttls_auto: true
     # }
 
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.active_job.queue_adapter = :delayed_job
-    
+
     config.action_mailer.default_url_options = { host: "http://localhost:3000" }
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.middleware.use(Rack::Tracker) do
+      handler :google_analytics, { tracker: 'UA-109030270-1' }
+      handler :vwo, { account_id: '322530' }
+    end
   end
 end
